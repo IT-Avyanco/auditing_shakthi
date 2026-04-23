@@ -1,0 +1,98 @@
+/* Dark theme styles for Fixed Audit Pricing section */
+.pricing--dark {
+  background: #0a1c46;
+  color: #fff;
+}
+
+.pricing__eyebrow {
+  color: #4791c4;
+}
+
+.pricing__heading {
+  color: white;
+  font-weight: 600;
+}
+
+.pricing__subtext {
+  color: #b0bec5;
+}
+
+.pricing--dark .pricing__header,
+.pricing--dark .pricing__footnote {
+  color: #fff;
+}
+
+.pricing--dark .pricing__grid {
+  background: transparent;
+}
+
+.pricing--dark .pricing-card {
+  background: #17284f;
+  color: #fff;
+  border: 1px solid #2d3342;
+}
+
+.pricing--dark .pricing-card__price-num {
+  color: #fd4a36;
+}
+
+.pricing-card__price {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: medium;
+}
+
+.pricing--dark .pricing-card__btn--solid {
+  background: #fd4a36;
+  color: #181c23;
+}
+
+.pricing--dark .pricing-card__btn--outline {
+  border-color: #fd4a36;
+  color: #fd4a36;
+}
+
+.pricing--dark .pricing-card__badge {
+  background: #fd4a36;
+  color: #181c23;
+}
+
+/* hover */
+.pricing--dark .pricing-card__btn--solid:hover {
+  background: #e03a2a;
+}
+
+.pricing--dark .pricing-card__btn--outline:hover {
+  background: #fd4a36;
+  color: #181c23;
+}
+
+.pricing__footnote-link {
+  color: #4791c4;
+}
+
+.pricing-card__includes-label {
+  color: #4791c4 !important;
+  font-weight: 500;
+}
+
+.pricing-card__tier {
+  text-transform: capitalize;
+  font-size: x-large;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: .2rem;
+}
+
+.pricing-card__item {
+  color: white;
+}
+
+/* .site-top  hide in mobile */
+@media (max-width: 576px) {
+
+  .site-top,
+  .phone-link {
+    display: none;
+  }
+}

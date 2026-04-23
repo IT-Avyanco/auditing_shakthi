@@ -69,7 +69,8 @@
     function run(now) {
       const progress = Math.min((now - startTime) / duration, 1);
       const eased = 1 - Math.pow(1 - progress, 3);
-      const current = Math.round(target * eased);
+      const currentRaw = target * eased;
+      const current = target % 1 === 0 ? Math.round(currentRaw) : currentRaw.toFixed(1);
       node.textContent = current + suffix;
 
       if (progress < 1) {

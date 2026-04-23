@@ -174,8 +174,7 @@ a {
   position: sticky;
   top: 0;
   z-index: 30;
-  backdrop-filter: blur(10px);
-  background: color-mix(in srgb, var(--bg-page) 82%, transparent);
+  background-color: white;
   border-bottom: 1px solid color-mix(in srgb, var(--border) 65%, transparent);
 }
 
@@ -188,7 +187,7 @@ a {
 }
 
 .logo-wrap img {
-  height: 44px;
+  height: 55px;
   width: auto;
 }
 
@@ -217,7 +216,7 @@ a {
 .phone-link {
   color: var(--avy-darkblue);
   text-decoration: none;
-  font-weight: 800;
+  font-weight: 650;
   font-size: 1.28rem;
   line-height: 1;
   letter-spacing: 0.01em;
@@ -258,8 +257,8 @@ a {
 
 .btn-ghost {
   border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text-body);
+  background: var(--bg-page);
+  color: var(--avy-darkblue);
 }
 
 .hero {
@@ -488,6 +487,7 @@ a {
 .section-head h2 {
   font-size: clamp(1.5rem, 2.7vw, 2.4rem);
   margin-bottom: 0.5rem;
+  color: var(--avy-darkblue);
 }
 
 .section-head p {
@@ -702,20 +702,6 @@ a {
   justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
-}
-
-.floating-wa {
-  position: fixed;
-  right: 1rem;
-  bottom: 1rem;
-  z-index: 24;
-  text-decoration: none;
-  background: #24d366;
-  color: #fff;
-  border-radius: 999px;
-  padding: 0.65rem 0.9rem;
-  font-weight: 700;
-  box-shadow: 0 12px 22px rgba(36, 211, 102, 0.38);
 }
 
 .reveal {
@@ -1067,6 +1053,154 @@ a {
 
 .pricing__footnote-link:hover {
   color: var(--c-primary-dark);
+}
+
+/* ── Footer Wrapper ── */
+.site-footer {
+  background: linear-gradient(135deg, #0d1b3e 0%, #0a1628 40%, #0d1f45 100%);
+  padding: var(--sp-9) var(--container-px) 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: #ffffff;
+}
+
+.footer-inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+/* ── Two-card grid ── */
+.footer-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-6);
+  margin-bottom: var(--sp-8);
+}
+
+@media (max-width: 768px) {
+  .footer-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Shared card style ── */
+.footer-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: var(--radius-xl);
+  padding: var(--sp-7) var(--sp-7);
+  backdrop-filter: blur(6px);
+}
+
+/* ── LEFT card – Contact ── */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  margin-bottom: var(--sp-6);
+}
+
+/* Simple SVG logo mark matching Avyanco brand */
+.footer-logo svg {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+}
+
+.footer-logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.contact-heading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: var(--sp-5);
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.contact-list li {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.80);
+}
+
+.contact-list strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.contact-list a {
+  color: var(--avy-lightblue);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.contact-list a:hover {
+  color: #7ec8f7;
+  text-decoration: underline;
+}
+
+/* ── RIGHT card – Map ── */
+.map-heading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: var(--sp-3);
+}
+
+.map-subtext {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.70);
+  margin-bottom: var(--sp-5);
+  line-height: 1.5;
+}
+
+.map-embed-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  aspect-ratio: 16/9;
+}
+
+.map-embed-wrap iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: none;
+}
+
+/* ── Bottom bar ── */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+  padding: var(--sp-5) 0 var(--sp-6);
+}
+
+.footer-copyright {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: var(--sp-3);
+}
+
+.footer-disclaimer {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.40);
+  line-height: 1.65;
+}
+
+.footer-disclaimer strong {
+  color: rgba(255, 255, 255, 0.55);
+  font-weight: 600;
 }
 
 /* ================================================================
